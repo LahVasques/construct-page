@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" media="screen">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" media="screen">
@@ -263,34 +263,47 @@
                 <h1 id="expert" class="font-glow-better rosa-escuro">EXPERT EM</h1>
                 <h1 id="peles" class="bold font-better-signature lavanda">peles</h1>
                 <h4 id="descricao">Negra, clara, mista e madura.</h4>
-                <button class="coluna-esquerda__botao font-poppins">Ver Mais</button>
+                <a href="#sessao-transicao">
+                    <button class="coluna-esquerda__botao font-poppins">Ver Mais</button></a>
             </div>
             <div id="seta">
                 <img id="seta-projetos" src="assets/img/right-arrow.png" alt="seta">
             </div>
         </section>
-
+                <h1 class="font-glow-better roxo-escuro">Galeria</h1>
         <section id="sessao-transicao">
-            <div id="conteiner-transicao">
-
-                
-                <div id="img-central">
-                    <img src="assets/img/mulhertransicao.png" alt="Mulher central">
-                    <button class="btn-vermais">VER MAIS</button>
-                </div>
-                
-                <div class="transicao-esquerda">
-                    <div id="img-lateral-esquerda1" class="parallax"></div>
-                    <div id="img-lateral-esquerda2" class="parallax"></div>
-                <div>
-                <div class="transicao-direita">
-                    <div id="img-lateral-direita3" class="parallax"></div>
-                    <div id="img-lateral-direita4" class="parallax"></div>
-                </div>
-
+             
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="0" data-aos-mirror="true"
+                data-aos-once="false">
+                <img src="assets/img/1mulhertransicao.png" alt="">
             </div>
-        </section>
 
+            <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="200"
+                data-aos-mirror="true" data-aos-once="false">
+                <img src="assets/img/2mulhersessao3.jpg" alt="">
+            </div>
+
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200"
+                data-aos-mirror="true" data-aos-once="false">
+                <img src="assets/img/3mulhertransicao.png" alt="">
+            </div>
+
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="50" data-aos-mirror="true"
+                data-aos-once="false">
+                <img src="assets/img/4mulhertransicao.png" alt="">
+            </div>
+
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200"
+                data-aos-mirror="true" data-aos-once="false">
+                <img src="assets/img/5mulhertransicao.png" alt="">
+            </div>
+
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="50" data-aos-mirror="true"
+                data-aos-once="false">
+                <img src="assets/img/6mulhertransicao.png" alt="">
+            </div>
+
+        </section>
 
         <section id="sessao-sara">
 
@@ -586,9 +599,22 @@
     </a> -->
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                delay: 0,
+                duration: 1000,
+                once: false,         // permite animar mais de uma vez
+                mirror: true         // ativa animação reversa ao scrollar pra cima
+            });
+        });
+
+        AOS.refresh(); // recalcula posições após inicialização
+
+    </script>
+    <script src="assets/js/index.js"></script>
 
 </body>
 
 </html>
-
-<script src="assets/js/index.js"></script>

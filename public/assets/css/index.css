@@ -469,125 +469,68 @@
 
 #mulher-projetos img,
 #texto-projetos {
-  transition: transform 0.6s ease, opacity 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 /* classe que ativa a animação de saída */
 .slide-out {
-  transform: translateX(-100px);
-  opacity: 0;
+    transform: translateX(-100px);
+    opacity: 0;
 }
 
 /* classe que ativa a animação de entrada */
 .slide-in {
-  transform: translateX(100px);
-  opacity: 0;
+    transform: translateX(100px);
+    opacity: 0;
 }
+
 .slide-in-active {
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
 
-/* Estilização Transiçao */
-/* Seção principal */
+/* Sessão principal */
+/* Sessão principal */
 #sessao-transicao {
-  position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  max-width: 1200px; /* limite de largura para evitar que tudo fique esticado */
+  margin: 0 auto; /* centraliza a sessão, não as imagens */
+  padding: 0 40px; /* espaçamento lateral interno */
+  box-sizing: border-box;
+}
+
+/* Container das imagens */
+#sessao-transicao > div {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 80px 0;
 }
 
-/* Container interno */
-#conteiner-transicao {
-  position: relative;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Alternar alinhamento das linhas */
+#sessao-transicao > div:nth-child(odd) {
+  justify-content: flex-start;
 }
 
-/* Imagem central */
-#img-central {
-  position: relative;
-  z-index: 3;
-  text-align: center;
+#sessao-transicao > div:nth-child(even) {
+  justify-content: flex-end;
 }
 
-#img-central img {
-  width: 350px;
-  border-radius: 12px;
+/* Imagens */
+#sessao-transicao img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
 }
 
-.transicao-esquerda{
+/* Efeito hover */
+#sessao-transicao img:hover {
+  transform: scale(1.05);
 }
 
-.transicao-direita{
-}
-
-
-.btn-vermais {
-  margin-top: 10px;
-  background: linear-gradient(90deg, #f88, #f55);
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-/* Parallax base */
-.parallax {
-  position: absolute;
-  height: 400px;
-  width: 280px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* 💥 Faz o parallax sem JS */
-  z-index: 1;
-}
-
-/* Esquerdas */
-#img-lateral-esquerda1 {
-  left: 10%;
-  top: 1%;
-  background-size: 20%;
-  background-position: 15% 20%;
-  background-image: url('../img/1mulhertransicao.png');
-  background-repeat: no-repeat;
-
-}
-
-#img-lateral-esquerda2 {
-  left: 10%;
-  top: 65%;
-  background-position: 10% 350px;
-  background-image: url('../img/2mulhertransicao.png');
- background-size: contain;
-background-repeat: no-repeat;
-}
-
-/* Direitas */
-#img-lateral-direita3 {
-  right: 10%;
-  top: 10%;
-  background-image: url('../img/3mulhertransicao.png');
-   background-size: contain;
-   background-position: left top;
-     background-repeat: no-repeat;
-}
-
-#img-lateral-direita4 {
-  right: 5%;
-  bottom: 15%;
-  background-image: url('../img/4mulhertransicao.png');
-   background-size: contain;
-     background-repeat: no-repeat;
-   
-  
+/* Efeito hover */
+#sessao-transicao img:hover {
+  transform: scale(1.05);
 }
 
 
@@ -604,7 +547,7 @@ background-repeat: no-repeat;
 
 #colunasara-esquerda {
     position: relative;
-     display: inline-block;
+    display: inline-block;
     /* left: 6.6vw;
     z-index: 1; */
 }
@@ -676,10 +619,14 @@ background-repeat: no-repeat;
 
 /* Mapa à direita */
 #sessao-contato-mapa-direita {
-    position: absolute; /* mudou de relative pra absolute */
-    top: 50%; /* centraliza verticalmente */
-    right: 5vw; /* distancia da borda direita */
-    transform: translateY(-50%); /* centraliza vertical */
+    position: absolute;
+    /* mudou de relative pra absolute */
+    top: 50%;
+    /* centraliza verticalmente */
+    right: 5vw;
+    /* distancia da borda direita */
+    transform: translateY(-50%);
+    /* centraliza vertical */
     width: 40%;
 }
 
@@ -1209,7 +1156,7 @@ hr {
     }
 
     .sobre-texto {
-        left: 83% ;
+        left: 83%;
         top: 44%;
     }
 
@@ -1339,7 +1286,7 @@ hr {
     /*Estilização Menu*/
     .logo-menu-container {
         top: 2vh;
-      
+
     }
 
     #logo-area svg {
@@ -1348,7 +1295,7 @@ hr {
 
     .menu-nav {
         width: 135px;
-          
+
     }
 
     .menu-nav svg {
@@ -1450,9 +1397,10 @@ hr {
     }
 
     .sobre-texto {
-    left: 84%;
-    top: 48%;
-}
+        left: 84%;
+        top: 48%;
+    }
+
     .mulher-secao-sobre {
         height: 62%;
         top: 50%;
@@ -1480,14 +1428,14 @@ hr {
 
 
     /* Estilização Sessão Projetos*/
-#texto-projetos {
-    position: relative;
-    right: 2vw;
-}
+    #texto-projetos {
+        position: relative;
+        right: 2vw;
+    }
 
     #sessao-projetos h3 {
         font-size: 20x;
-       
+
     }
 
     #expert {
