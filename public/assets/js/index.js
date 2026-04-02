@@ -54,6 +54,9 @@ seta.addEventListener("click", () => {
 });
 
 
+
+
+
 const logoArea = document.getElementById("logo-area");
 const sessaoSara = document.getElementById("sessao-sara");
 
@@ -106,3 +109,7 @@ function trocarLogo() {
 window.addEventListener("scroll", trocarLogo);
 // Atualiza ao carregar (caso já esteja na sessão)
 trocarLogo();
+
+
+
+
